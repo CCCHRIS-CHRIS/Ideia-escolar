@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 10px solid #024081;  /* Borda ao redor de toda a página */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.school-name {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Menu de navegação para seções */
+.sections-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.sections-nav li {
+    margin: 0 15px;
+}
+
+.sections-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Seção de História da Escola */
+.history {
+    background-color: #e6f2ff;
+    padding: 40px 20px;
+}
+
+.history-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.history-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espaçamento entre o texto e a imagem */
+    flex-wrap: wrap; /* Permite que o layout se ajuste em telas pequenas */
+}
+
+.history-image {
+    width: 45%;  /* Ajusta a largura da imagem */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+.history p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    flex: 1; /* Garante que o texto ocupe todo o espaço disponível */
+    margin: 0;
+    text-align: justify; /* Para melhorar a legibilidade do texto */
+    width: 100%; /* Permite que o texto ocupe toda a largura */
+}
+
+/* Para telas menores, imagem e texto devem empilhar (layout responsivo) */
+@media (max-width: 768px) {
+    .history-content {
+        flex-direction: column; /* Alinha imagem e texto na vertical */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .history-image {
+        width: 80%; /* Ajusta o tamanho da imagem em telas pequenas */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    .history p {
+        width: 100%; /* Garante que o texto ocupe toda a largura */
+        text-align: center; /* Centraliza o texto em telas pequenas */
+    }
+}
+
+/* Seção Secretaria */
+.secretaria {
+    background-color: #054997;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.secretaria h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.secretaria p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção de Mídia */
+.media {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.media-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.media-item {
+    width: 48%;
+    margin: 1%;
+}
+
+.media-image,
+.media-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Modal de visualização */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.modal img,
+.modal video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: #033aaf;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}

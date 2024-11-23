@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História da Escola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="school-name">Colégio Estadual Padre Cláudio Morelli</h1>
+            <!-- Menu de navegação para seções -->
+            <nav class="sections-nav">
+                <ul>
+                    <li><a href="#history">História da Escola</a></li>
+                    <li><a href="#secretaria">Secretaria</a></li>
+                    <li><a href="#media">Mídia</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de História da Escola -->
+    <section class="history" id="history">
+        <div class="container">
+            <h2 class="history-title">História</h2>
+            <div class="history-content">
+                <img src="putz.jpg.jpg" alt="Imagem do Colégio" class="history-image">
+                <p>O Colégio Estadual Padre Cláudio Morelli está localizado no bairro Umbará, em Curitiba, Paraná. Sua história começa em 1912, quando foi fundado como uma escola paroquial pelas Irmãs Zeladoras do Sagrado Coração de Jesus. O colégio foi essencial para a formação da comunidade local, composta majoritariamente por imigrantes italianos, que se estabeleceram na região em 1887.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Secretaria -->
+    <section class="secretaria" id="secretaria">
+        <div class="container">
+            <h2>Secretaria</h2>
+            <p>Hoje 21/11, foram realizadas pesquisas no setor da secretaria do Colégio Padre Cláudio Morelli. Fizemos uma pesquisa com a secretaria Rosana Rosa Kurek, a respeito do colégio, suas visões sobre, o que ela pensa a respeito, qual a visão de futuro que ela possui.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Mídia com Fotos e Vídeos -->
+    <section class="media" id="media">
+        <div class="container">
+            <h2>Mídia</h2>
+            <div class="media-gallery">
+                <div class="media-item">
+                    <img src="colégio.jpg" alt="Imagem 1" class="media-image" onclick="openModal('image1.jpg', 'Descrição da imagem 1')">
+                </div>
+                <div class="media-item">
+                    <video controls class="media-video" onclick="openModal('video.mp4', 'Descrição do vídeo')">
+                        <source src="video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para visualização de imagens e vídeos -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content" class="modal-content">
+            <img id="modal-image" src="" alt="">
+            <video id="modal-video" controls>
+                <source src="" type="video/mp4">
+            </video>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Colégio Estadual Padre Cláudio Morelli - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
